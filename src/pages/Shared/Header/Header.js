@@ -1,12 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../../../Assets/Logo/logo.png";
 import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";
-import {FaServicestack, FaBlogger, FaArrowCircleRight, FaEdit, FaHome, FaPlusCircle, FaRegRegistered, FaSignInAlt, FaSignOutAlt, FaUser} from 'react-icons/fa';
+import {FaServicestack, FaBlogger, FaArrowCircleRight, FaEdit, FaHome, FaPlusCircle, FaRegRegistered, FaSignInAlt, FaSignOutAlt, FaUser, FaSun} from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const [toggleMenu , setToggleMenu] = useState(false)
+
+
+
 
   const handleToggle = () =>{
     if(!toggleMenu){
@@ -23,6 +26,36 @@ const Header = () => {
   <Link to='/blogs' className="px-4 py-2 mr-3 rounded flex text-md items-center hover:bg-violet-400"><FaBlogger className="md:hidden mr-3"/>Blogs</Link>
   
   </>
+
+
+
+
+
+const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setTheme('dark');
+    }
+    else {
+      setTheme('light');
+    }
+  }, [])
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+
+
 
 
   const handleSignOut = () => {
@@ -47,7 +80,11 @@ const Header = () => {
 
           
         {menuItem}
+{/* 
+        <li><button>
 
+          <FaSun></FaSun>
+          </button></li> */}
 
 
         </ul>
