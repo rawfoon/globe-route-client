@@ -8,6 +8,7 @@ const MyCommitedReview = ({myReview, variables, handleDelete, handleUpdateReview
   const [finalReview, setFinalReview] = useState(myReview)
 
   const {_id, review, rating, time, photoURL, name, email, serviceInfoName} = finalReview
+  console.log(finalReview);
 
 
 
@@ -58,7 +59,7 @@ const MyCommitedReview = ({myReview, variables, handleDelete, handleUpdateReview
         <div className='mx-auto max-w-4xl '>
 
                 <div className="my-8">
-      <div className=" rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+      <div className=" rounded-md shadow-md  bg-gray-900  text-gray-100">
         
         <div className="flex flex-col justify-between p-6 space-y-8">
           <div className="space-y-2">
@@ -95,7 +96,7 @@ const MyCommitedReview = ({myReview, variables, handleDelete, handleUpdateReview
           </div>
             {/* Modal */}
             <div className={edit ? 'fixed left-0 md:left-[38%] top-[20%] ' : 'hidden' }>
-            <div className="flex flex-col max-w-md gap-2 p-6 rounded-md shadow-md dark:bg-gray-600 dark:text-gray-100  ">
+            <div className="flex flex-col max-w-md gap-2 p-6 rounded-md shadow-md  bg-gray-600  text-gray-100  ">
 	<h2 className="text-xl font-semibold leading-tight tracking-wide">Please edit your review.</h2>
   <div  >
   <form onSubmit={handleUpdate} className="mt-5">
@@ -104,29 +105,29 @@ const MyCommitedReview = ({myReview, variables, handleDelete, handleUpdateReview
                 name="review"
                 type="text"
                 placeholder="Write a review on this service..."
-                className="w-full h-24 pt-2  px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
-                defaultValue={review}
+                className="w-full h-24 pt-2  px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400  border-gray-700  text-gray-900"
+                defaultValue={finalReview?.review}
                 required
               />
               <input
-                className="p-2 mt-8 rounded-xl border font-semibold text-slate-900 dark:bg-white"
+                className="p-2 mt-8 rounded-xl border font-semibold text-slate-900  bg-white"
                 type="text"
                 name="rating"
                 placeholder="Rating"
-                defaultValue={rating}
+                // defaultValue={rating}
                 
               />
               <br />
 
               <div className="flex flex-col justify-center gap-3 mt-6 sm:flex-row">
               <input
-                className="px-6 py-3 my-2 text-lg font-semibold rounded dark:bg-violet-400 dark:hover:bg-violet-500 dark:text-gray-900"
+                className="px-6 py-3 my-2 text-lg font-semibold rounded  bg-violet-400  hover:bg-violet-500  text-gray-900"
                 type="submit"
                 name=""
                 value="Update Review"
               />
 	
-		{/* <button  className="px-6 py-2 rounded-sm shadow-sm dark:bg-violet-400 dark:text-gray-900">Agree</button> */}
+		{/* <button  className="px-6 py-2 rounded-sm shadow-sm  bg-violet-400  text-gray-900">Agree</button> */}
 		<button onClick={handleCancel} className="px-6 py-2 rounded-sm">Cancel</button>
   </div>
             </form>
@@ -136,7 +137,7 @@ const MyCommitedReview = ({myReview, variables, handleDelete, handleUpdateReview
 
 
             <div className={deleting ? 'fixed left-0 md:left-[40%] top-[30%] ' : 'hidden' }>
-            <div className="flex flex-col max-w-md gap-2 p-6 rounded-md shadow-md dark:bg-gray-600 dark:text-gray-100 ">
+            <div className="flex flex-col max-w-md gap-2 p-6 rounded-md shadow-md  bg-gray-600  text-gray-100 ">
 	<h2 className="text-xl font-semibold leading-tight tracking-wide">Are you sure to <span className='text-orange-500'>delete</span> this review?</h2>
 
 	<div className="flex flex-col justify-center gap-3 mt-6 sm:flex-row">

@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <div>
-      <section className="dark:bg-gray-800 dark:text-gray-100">
+      <section className=" bg-gray-800  text-gray-100">
         <div className="mx-5">
         <div
           className="container mx-auto rounded"
@@ -35,10 +35,10 @@ const Home = () => {
 			  The journey of a thousand miles begins with a single step...
               </p>
               <div className="flex flex-wrap justify-center">
-                <button className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">
+                <button className="px-8 py-3 m-2 text-lg font-semibold rounded  bg-violet-400  text-gray-900">
                   Get started
                 </button>
-                <button className="px-8 py-3 m-2 text-lg border rounded dark:text-gray-50 dark:border-gray-700">
+                <button className="px-8 py-3 m-2 text-lg border rounded  text-gray-50  border-gray-700">
                   Learn more
                 </button>
               </div>
@@ -48,7 +48,7 @@ const Home = () => {
         </div>
       </section>
      
-  <section className="dark:bg-gray-800 dark:text-gray-100 ">
+  <section className=" bg-gray-800  text-gray-100 ">
     <div className="container mx-auto py-10  ">
       <div className="mb-10">
         <h1 className="text-5xl text-center">Our Services</h1>
@@ -66,7 +66,7 @@ const Home = () => {
       }
     </div>
     <div className="flex justify-end mt-5">
-        <Link to='/services' className="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900">
+        <Link to='/services' className="px-8 py-3 m-2 text-lg font-semibold rounded  bg-violet-400  text-gray-900">
                   See All
                 </Link>
         </div>
@@ -76,7 +76,7 @@ const Home = () => {
   <section>
     <VisitSites></VisitSites>
   </section>
-  <section className="py-10 dark:bg-gray-800 dark:text-gray-100 " >
+  <section className="py-10  bg-gray-800  text-gray-100 " >
     <Subscribe></Subscribe>
   </section>
 

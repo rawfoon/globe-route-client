@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../../../Context/AuthProvider/AuthProvider";
 import useTitle from "../../../hooks/useTitle";
 import ServiceReviews from "../../Reviews/ServiceReview/ServiceReviews";
+import {FaStar} from 'react-icons/fa';
 
 const ServiceDetails = () => {
 
@@ -13,7 +14,7 @@ const ServiceDetails = () => {
   const serviceDetails = useLoaderData();
   useTitle('Service Details')
 
-  const {_id, serviceName, photoURL, description } = serviceDetails[0];
+  const {_id, serviceName, photoURL, description, price, rating } = serviceDetails[0];
   //   console.log(serviceDetails);
 
 
@@ -102,16 +103,16 @@ const ServiceDetails = () => {
 
 
   return (
-    <div className="dark:bg-gray-800 dark:text-gray-100 py-10">
+    <div className=" bg-gray-800  text-gray-100 py-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
         <div className=" col-span-1 mx-2">
-          <div className=" rounded-md  max-w-xl mx-auto shadow-md dark:bg-gray-900 dark:text-gray-100">
+          <div className=" rounded-md  max-w-xl mx-auto shadow-md  bg-gray-900  text-gray-100">
             <PhotoProvider>
               <PhotoView src={photoURL}>
                 <img
                   src={photoURL}
                   alt=""
-                  className="object-cover object-center w-full rounded-t-md  dark:bg-gray-500"
+                  className="object-cover object-center w-full rounded-t-md   bg-gray-500"
                 />
               </PhotoView>
             </PhotoProvider>
@@ -120,11 +121,15 @@ const ServiceDetails = () => {
                 <h2 className="text-3xl font-semibold tracking-wide">
                   {serviceName}
                 </h2>
-                <p className="dark:text-gray-100">{description}</p>
+                <p className=" text-gray-100">{description}</p>
               </div>
+              <div className='flex justify-between'>
+			<p>Price: ${price}</p>
+			<p className='flex items-center'><FaStar className='text-yellow-500 mr-2'/>{rating}</p>
+		</div>
               {/* <button
                 type="button"
-                className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-400 dark:text-gray-900"
+                className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md  bg-violet-400  text-gray-900"
               >
                 Read more
               </button> */}
@@ -138,10 +143,10 @@ const ServiceDetails = () => {
             !user ?
             <>
             <div className=" m-3  text-5xl flex gap-8 items-center text-[#002D74]">
-            <p className="dark:text-slate-200">Please login to add a review.</p>
+            <p className=" text-slate-200">Please login to add a review.</p>
             <Link
               to="/login"
-              className="py-2 px-5 text-xl bg-white border rounded-xl hover:scale-110 duration-300 dark:bg-slate-300"
+              className="py-2 px-5 text-xl bg-white border rounded-xl hover:scale-110 duration-300  bg-slate-300"
             >
               Login
             </Link>
@@ -161,11 +166,11 @@ const ServiceDetails = () => {
                 name="review"
                 type="text"
                 placeholder="Write a review on this service..."
-                className="w-full h-24 pt-2  px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                className="w-full h-24 pt-2  px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400  border-gray-700  text-gray-900"
                 required
               />
               <input
-                className="p-2 mt-8 rounded-xl border font-semibold text-slate-900 dark:bg-white"
+                className="p-2 mt-8 rounded-xl border font-semibold text-slate-900  bg-white"
                 type="text"
                 name="rating"
                 placeholder="Rating"
@@ -174,7 +179,7 @@ const ServiceDetails = () => {
               <br />
 
               <input
-                className="px-8 py-3 my-2 text-lg font-semibold rounded dark:bg-violet-400 dark:hover:bg-violet-500 dark:text-gray-900"
+                className="px-8 py-3 my-2 text-lg font-semibold rounded  bg-violet-400  hover:bg-violet-500  text-gray-900"
                 type="submit"
                 name=""
                 value="Add Review"

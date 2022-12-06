@@ -141,12 +141,12 @@ const Register = () => {
 
   return (
     <div>
-      <section className="bg-gray-50 min-h-screen flex items-center justify-center dark:bg-gray-800 dark:text-gray-100">
+      <section className="min-h-screen flex items-center justify-center  bg-gray-800  text-gray-100">
         {/* login container  */}
-        <div className="bg-gray-100 flex rounded-2xl shadow-lg max-w-3xl p-5 items-center dark:bg-gray-900 dark:text-gray-100">
+        <div className=" flex rounded-2xl shadow-lg max-w-3xl p-5 items-center  bg-gray-900  text-gray-100">
           {/* form */}
           <div className="md:w-1/2 px-8 md:px-16">
-            <h2 className="font-bold text-2xl text-[#002D74] dark:text-slate-200">
+            <h2 className="font-bold text-2xl text-[#002D74]  text-slate-200">
               Register
             </h2>
             {/* <p className="text-xs mt-4 text-[#002D74]">
@@ -155,20 +155,20 @@ const Register = () => {
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <input
-                className="p-2 mt-8 rounded-xl border font-semibold text-slate-900 dark:bg-slate-300"
+                className="p-2 mt-8 rounded-xl border font-semibold text-slate-900  bg-slate-300"
                 type="text"
                 name="name"
                 placeholder="Full Name"
                 required
               />
               <input
-                className="p-2  rounded-xl border font-semibold text-slate-900 dark:bg-slate-300"
+                className="p-2  rounded-xl border font-semibold text-slate-900  bg-slate-300"
                 type="text"
                 name="photoURL"
                 placeholder="Photo URL"
               />
               <input
-                className="p-2  rounded-xl border font-semibold text-slate-900 dark:bg-slate-300"
+                className="p-2  rounded-xl border font-semibold text-slate-900  bg-slate-300"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -176,7 +176,7 @@ const Register = () => {
               />
               <div className="relative">
                 <input
-                  className="p-2 rounded-xl border w-full font-semibold text-slate-900 dark:bg-slate-300"
+                  className="p-2 rounded-xl border w-full font-semibold text-slate-900  bg-slate-300"
                   type="password"
                   name="password"
                   placeholder="Password"
@@ -203,7 +203,7 @@ const Register = () => {
             <div className="flex justify-center gap-4 ">
               <button
                 onClick={handleGoogleSignIn}
-                className="bg-white border p-3  rounded-full mt-5    hover:scale-105 duration-300 text-[#002D74] dark:bg-slate-300"
+                className="bg-white border p-3  rounded-full mt-5    hover:scale-105 duration-300 text-[#002D74]  bg-slate-300"
               >
                 <svg
                   className=""
@@ -232,7 +232,7 @@ const Register = () => {
 
               <button
                 onClick={handleGithubSignIn}
-                className="bg-white border p-3  rounded-full mt-5   hover:scale-105 duration-300 text-[#002D74] dark:bg-slate-300"
+                className="bg-white border p-3  rounded-full mt-5   hover:scale-105 duration-300 text-[#002D74]  bg-slate-300"
               >
                 <svg
                   className=""
@@ -250,10 +250,10 @@ const Register = () => {
             </div> */}
 
             <div className="mt-3 text-xs flex justify-between items-center text-[#002D74]">
-              <p className="dark:text-slate-200">Already have an account?</p>
+              <p className=" text-slate-200">Already have an account?</p>
               <Link
                 to="/login"
-                className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300 dark:bg-slate-300"
+                className="py-2 px-5 bg-white border rounded-xl hover:scale-110 duration-300  bg-slate-300"
               >
                 Login
               </Link>

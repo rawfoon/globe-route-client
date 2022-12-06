@@ -47,19 +47,19 @@ const AddServices = () => {
   };
 
   return (
-    <div>
-      <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
+    <div className="py-20 bg-gray-800  text-gray-50">
+      <section className="p-6 mb-24  bg-gray-800  text-gray-50">
         <form
           onSubmit={handleAddService}
           className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid"
         >
-          <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
+          <div className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm  bg-gray-900">
             <div className="space-y-2 col-span-full lg:col-span-1">
-              <p className="font-medium">Personal Inormation</p>
-              <p className="text-xs">
+              <p className="font-medium text-3xl">Add a service</p>
+              {/* <p className="text-xs">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Adipisci fuga autem eum!
-              </p>
+              </p> */}
             </div>
             <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
               <div className="col-span-full sm:col-span-3">
@@ -71,7 +71,7 @@ const AddServices = () => {
                   name="serviceName"
                   type="text"
                   placeholder="Service Name"
-                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400  border-gray-700  text-gray-900"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -83,7 +83,7 @@ const AddServices = () => {
                   name="price"
                   type="text"
                   placeholder="Price"
-                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400  border-gray-700  text-gray-900"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -95,7 +95,7 @@ const AddServices = () => {
                   name="photoURL"
                   type="text"
                   placeholder="Photo URL"
-                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400  border-gray-700  text-gray-900"
                 />
               </div>
               <div className="col-span-full sm:col-span-3">
@@ -107,7 +107,7 @@ const AddServices = () => {
                   name="rating"
                   type="text"
                   placeholder="Rating"
-                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full h-10 px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400  border-gray-700  text-gray-900"
                 />
               </div>
               <div className="col-span-full sm:col-span-3 md:col-span-full lg:col-span-full">
@@ -119,12 +119,12 @@ const AddServices = () => {
                   name="description"
                   type="text"
                   placeholder="Description"
-                  className="w-full h-24 pt-2  px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"
+                  className="w-full h-24 pt-2  px-3 rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400  border-gray-700  text-gray-900"
                 />
               </div>
 
               <input
-                className="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800"
+                className="px-8 py-3 font-semibold rounded  text-gray-100  bg-violet-500 hover:bg-violet-600"
                 type="submit"
                 name=""
                 value="Add Service"

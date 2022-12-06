@@ -12,7 +12,7 @@ const MyReviews = () => {
 useTitle('My Reviews')
 
   const [myReviews, setMyReviews] = useState([]);
-  // console.log('hello',myReviews);
+  console.log('hello',myReviews);
   const [edit, setEdit] = useState(false)
   const [deleting, setDeleting] = useState(false)
 
@@ -109,20 +109,20 @@ autoClose: 2000
   }
 
   return (
-    <div className="dark:bg-gray-800 dark:text-gray-100">
+    <div className=" bg-gray-800  text-gray-100">
       <div className="container mx-auto py-10">
-        <div className="flex flex-col justify-center max-w-xs mx-auto p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100">
+        <div className="flex flex-col justify-center max-w-xs mx-auto p-6 shadow-md rounded-xl sm:px-12  bg-gray-900  text-gray-100">
           <img
             src={user?.photoURL}
             alt=""
-            className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
+            className="w-32 h-32 mx-auto rounded-full  bg-gray-500 aspect-square"
           />
           <div className="space-y-4 text-center divide-y divide-gray-700">
             <div className="my-2 space-y-1">
               <h2 className="text-xl font-semibold sm:text-2xl">
                 {user?.displayName}
               </h2>
-              <p className="px-5 text-xs sm:text-base dark:text-gray-400">
+              <p className="px-5 text-xs sm:text-base  text-gray-400">
                 {user?.email}
               </p>
             </div>
@@ -131,7 +131,7 @@ autoClose: 2000
 
         {
             myReviews.length === 0 ?
-            <p>No reviews were added</p>
+            <p className="text-3xl md:text-5xl text-center">No reviews were added</p>
             :
             myReviews.map(myReview => <MyCommitedReview 
             key={myReview._id}

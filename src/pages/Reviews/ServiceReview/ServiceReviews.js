@@ -6,7 +6,7 @@ const ServiceReviews = ({singleReview}) => {
     // console.log(singleReview);
   return (
     <div className="my-8">
-      <div className=" rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+      <div className=" rounded-md shadow-md  bg-gray-900  text-gray-100">
         
         <div className="flex flex-col justify-between p-6 space-y-8">
           <div className="space-y-2">

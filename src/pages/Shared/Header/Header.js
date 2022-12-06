@@ -67,7 +67,7 @@ const [theme, setTheme] = useState('dark');
   };
 
   return (
-    <header className="p-4 dark:bg-slate-900 dark:text-gray-100">
+    <header className="p-4  bg-slate-900  text-gray-100">
       <div className="container flex justify-between h-16 mx-auto">
         <Link to='/'
           
@@ -94,7 +94,7 @@ const [theme, setTheme] = useState('dark');
             <>
             <Link to='addservices' className="px-4 py-2 mr-1 rounded flex text-md items-center hover:bg-violet-400">Add Service</Link>
             <Link to='myreviews' className="px-4 py-2 mr-1 rounded flex text-md items-center hover:bg-violet-400">My Reviews</Link>
-             <button onClick={handleSignOut} className="px-4 py-2 mr-3 rounded flex text-md items-center border rounded-full dark:border-violet-400 hover:bg-violet-400 dark:bg-transparent">
+             <button onClick={handleSignOut} className="px-4 py-2 mr-3 rounded flex text-md items-center border rounded-full  border-violet-400 hover:bg-violet-400  bg-transparent">
                  
                  <FaArrowCircleRight className="mr-2 " /> <span>Log Out</span>
                          </button>
@@ -123,7 +123,7 @@ const [theme, setTheme] = useState('dark');
             :
             <>
             <Link to='/login' className="self-center px-8 py-3 rounded mr-3 hover:bg-violet-400">Login</Link>
-          <Link to='/register' className="self-center px-8 py-3 font-semibold rounded dark:bg-violet-500 dark:hover:bg-violet-600 dark:text-s-900 ">
+          <Link to='/register' className="self-center px-8 py-3 font-semibold rounded  bg-violet-500  hover:bg-violet-600  text-s-900 ">
             Register
           </Link>
             
@@ -136,7 +136,7 @@ const [theme, setTheme] = useState('dark');
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            className="w-6 h-6 dark:text-gray-100"
+            className="w-6 h-6  text-gray-100"
           >
             <path
               strokeLinecap="round"
@@ -152,12 +152,12 @@ const [theme, setTheme] = useState('dark');
       {/* toggle menu */}
 
     <div className={`${!toggleMenu ?  'hidden' : ''}`}>
-    <div className="h-full w-full p-3 space-y-2 md:hidden  dark:bg-gray-900 dark:text-gray-100">
+    <div className="h-full w-full p-3 space-y-2 md:hidden   bg-gray-900  text-gray-100">
 	<div className="flex items-center p-2 space-x-4">
 		{
       user? 
       <>
-      <img src={user?.photoURL} alt="" className="w-12 h-12 rounded-full dark:bg-gray-500" />
+      <img src={user?.photoURL} alt="" className="w-12 h-12 rounded-full  bg-gray-500" />
 		<div>
 			<h2 className="text-lg font-semibold">{user.displayName}</h2>
 			
@@ -165,7 +165,7 @@ const [theme, setTheme] = useState('dark');
       </>
       :
       <>
-      <FaUser className="w-12 h-12 rounded-full dark:bg-gray-500" />
+      <FaUser className="w-12 h-12 rounded-full  bg-gray-500" />
 		<div>
 			<h2 className="text-lg font-semibold">User</h2>
 			
